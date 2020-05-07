@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Garry's Mod" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="64.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </Text>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" styleClass="scroll-pane" stylesheets="@../Stylesheets/stylesheet.css" VBox.vgrow="ALWAYS">
+        <content>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../Stylesheets/stylesheet.css">
+               <children>
+                  <TilePane fx:id="serverTiles" alignment="TOP_CENTER" hgap="70.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefColumns="2" prefRows="0" prefTileHeight="500.0" prefTileWidth="400.0" vgap="70.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: blue;" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: red;" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: orange;" />
+                     </children>
+                     <padding>
+                        <Insets bottom="70.0" top="40.0" />
+                     </padding>
+                  </TilePane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</VBox>

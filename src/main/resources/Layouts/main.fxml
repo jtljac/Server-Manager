@@ -1,45 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <HBox fx:id="Main" alignment="CENTER_LEFT" prefHeight="720.0" prefWidth="1280.0" styleClass="main" stylesheets="@../Stylesheets/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.datdeveloper.gameserverbrowser.MainController">
    <children>
       <VBox fx:id="buttonMenu" alignment="TOP_CENTER" prefWidth="250.0" styleClass="gamesMenu" stylesheets="@../Stylesheets/stylesheet.css" />
-      <AnchorPane fx:id="pageHost" HBox.hgrow="ALWAYS">
-         <children>
-            <VBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="garry's mod" textAlignment="CENTER">
-                     <font>
-                        <Font name="Comic Sans MS" size="56.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </Text>
-                  <ScrollPane fx:id="test2" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparant;" VBox.vgrow="ALWAYS">
-                     <content>
-                        <TilePane alignment="TOP_CENTER" hgap="100.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefColumns="2" prefRows="0" prefTileHeight="500.0" prefTileWidth="400.0" tileAlignment="TOP_CENTER" vgap="100.0">
-                           <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: red;" />
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: green;" />
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: blue;" />
-                           </children>
-                           <padding>
-                              <Insets bottom="40.0" top="30.0" />
-                           </padding>
-                        </TilePane>
-                     </content>
-                  </ScrollPane>
-               </children>
-            </VBox>
-         </children></AnchorPane>
+      <VBox fx:id="pageHost" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
    </children>
 </HBox>

@@ -23,4 +23,10 @@ public class UIUtils {
 
         return imageView;
     }
+
+    public enum ButtonStatus {
+        NORMAL,
+        SELECTED,
+        DISABLED
+    }
 }
