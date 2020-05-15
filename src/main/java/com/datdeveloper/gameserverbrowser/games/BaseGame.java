@@ -1,10 +1,6 @@
 package com.datdeveloper.gameserverbrowser.games;
 
-import com.datdeveloper.gameserverbrowser.games.steam.SteamGame;
-import com.datdeveloper.gameserverbrowser.util.FileHelper;
 import com.datdeveloper.gameserverbrowser.util.UIUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.TilePane;
 
-import java.io.*;
+import java.io.IOException;
 
 public class BaseGame {
     public String name = "";
@@ -77,37 +73,5 @@ public class BaseGame {
             e.printStackTrace();
             return null;
         }
-    }
-
-    // Serialization
-    public void saveGame(){
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        File file = FileHelper.openFile(new File(FileHelper.getSettingsDirectory() + "/" + this.name + ".json"));
-
-        try {
-            if (file != null) {
-                BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-                writer.write(gson.toJson(this));
-                writer.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static BaseGame loadGame() {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        SteamGame temp = new SteamGame();
-        File file = FileHelper.openFile(new File(FileHelper.getSettingsDirectory() + "/" + temp.name + ".json"));
-
-        try {
-            if (file.exists()) {
-                Reader reader = new FileReader(file);
-                return gson.fromJson(reader, BaseGame.class);
-            }
-        } catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
-        return temp;
     }
 }
